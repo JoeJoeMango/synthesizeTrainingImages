@@ -1,0 +1,232 @@
+0 FILE 1787 - Crater Cruiser.ldr
+0 Crater Cruiser
+0 Name: 1787 - Crater Cruiser.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 0 0 1 0 0 0 1 0 0 0 1 1787 - Vehicle + Cockpit.ldr
+1 0 -180 -51.695 90 -0.19509 0 0.980785 0 1 0 -0.980785 0 -0.19509 1787 - Minifig 2.ldr
+
+
+0 FILE 1787 - Cockpit.ldr
+0 Cockpit
+0 Name: 1787 - Cockpit.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 0 0 0 0 1 0 1 0 -1 0 0 3035.dat
+1 0 0 -8 90 -1 0 0 0 1 0 0 0 -1 2419.dat
+1 7 0 -8 -40 1 0 0 0 1 0 0 0 1 6104.dat
+1 7 -30 -32 30 1 0 0 0 1 0 0 0 1 4286.dat
+1 7 30 -32 30 1 0 0 0 1 0 0 0 1 4286.dat
+1 0 0 -32 -50 -1 0 0 0 1 0 0 0 -1 3937.dat
+1 0 0 -32 -90 -1 0 0 0 1 0 0 0 -1 3039.dat
+1 7 30 -32 -60 0 0 -1 0 1 0 1 0 0 2412b.dat
+1 7 -30 -32 -60 0 0 -1 0 1 0 1 0 0 2412b.dat
+1 1 -30 -64 70 0 0 1 0 1 0 -1 0 0 3665.dat
+1 1 30 -64 70 0 0 -1 0 1 0 1 0 0 3665.dat
+1 7 0 -64 70 1 0 0 0 1 0 0 0 1 3004.dat
+1 0 0 -32 -110 1 0 0 0 1 0 0 0 1 3747a.dat
+1 7 0 -64 50 1 0 0 0 1 0 0 0 1 3010.dat
+1 1 0 -88 70 1 0 0 0 1 0 0 0 1 3700.dat
+1 0 0 -40 -140 1 0 0 0 1 0 0 0 1 4859.dat
+1 0 -30 -88 60 0 0 1 0 1 0 -1 0 0 3004.dat
+1 0 30 -88 60 0 0 1 0 1 0 -1 0 0 3004.dat
+1 7 0 -88 50 -1 0 0 0 1 0 0 0 -1 3004.dat
+1 0 0 -96 70 1 0 0 0 1 0 0 0 1 3710.dat
+1 0 0 -96 50 1 0 0 0 1 0 0 0 1 4315.dat
+1 33 0 -92 36 1 0 0 0 1 0 0 0 1 2507.dat
+1 0 -30 -104 60 0 0 -1 0 1 0 1 0 0 2412b.dat
+1 0 30 -104 60 0 0 -1 0 1 0 1 0 0 2412b.dat
+
+
+0 FILE 1787 - Cockpit - Control Panel.ldr
+0 Cockpit - Control Panel
+0 Name: 1787 - Cockpit - Control Panel.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+0 FILE 1787 - Vehicle.ldr
+0 Vehicle
+0 Name: 1787 - Vehicle.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 7 0 0 0 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 0 -8 -60 0 0 1 0 1 0 -1 0 0 3034.dat
+1 0 0 -8 -160 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 40 -16 -160 1 0 0 0 1 0 0 0 1 2444.dat
+1 0 -40 -16 -160 -1 0 0 0 1 0 0 0 -1 2444.dat
+1 0 -30 -24 0 0 0 1 0 1 0 -1 0 0 3747a.dat
+1 0 30 -24 0 0 0 -1 0 1 0 1 0 0 3747a.dat
+1 7 0 -24 -170 1 0 0 0 1 0 0 0 1 2431.dat
+1 7 0 -24 -140 1 0 0 0 1 0 0 0 1 4859.dat
+1 0 70 -6 -160 0 0 -1 0 -1 0 -1 0 0 6118.dat
+1 0 -70 -6 -160 0 0 1 0 -1 0 1 0 0 6118.dat
+1 0 80 -32 0 1 0 0 0 1 0 0 0 1 2444.dat
+1 0 -80 -32 0 -1 0 0 0 1 0 0 0 -1 2444.dat
+1 0 0 -48 -170 -1 0 0 0 1 0 0 0 -1 4856.dat
+1 0 -60 -40 0 -1 0 0 0 1 0 0 0 -1 3020.dat
+1 0 60 -40 0 -1 0 0 0 1 0 0 0 -1 3020.dat
+1 1 0 -40 -80 -1 0 0 0 1 0 0 0 -1 4732.dat
+1 0 0 -40 100 0 0 -1 0 1 0 1 0 0 3832.dat
+1 0 -50 -40 200 0 0 1 0 1 0 -1 0 0 3747a.dat
+1 0 50 -40 200 0 0 -1 0 1 0 1 0 0 3747a.dat
+1 7 0 -48 200 1 0 0 0 1 0 0 0 1 3832.dat
+1 1 10 -48 10 1 0 0 0 1 0 0 0 1 2420.dat
+1 1 -10 -48 10 0 0 -1 0 1 0 1 0 0 2420.dat
+1 7 0 -48 -20 1 0 0 0 1 0 0 0 1 3020.dat
+1 0 0 -56 190 1 0 0 0 1 0 0 0 1 2419.dat
+1 0 100 -56 200 1 0 0 0 1 0 0 0 1 2444.dat
+1 0 -100 -56 200 -1 0 0 0 1 0 0 0 -1 2444.dat
+1 0 0 -72 0 0 0 -1 0 1 0 1 0 0 3001.dat
+1 0 0 -80 210 1 0 0 0 1 0 0 0 1 6112.dat
+1 7 0 -80 190 1 0 0 0 1 0 0 0 1 3039.dat
+1 1 30 -80 80 0 0 1 0 1 0 -1 0 0 6112.dat
+1 1 -30 -80 80 0 0 1 0 1 0 -1 0 0 6112.dat
+1 0 0 -56 -220 1 0 0 0 1 0 0 0 1 4859.dat
+1 7 0 -96 30 1 0 0 0 1 0 0 0 1 3039.dat
+1 0 -80 -80 190 1 0 0 0 1 0 0 0 1 3010.dat
+1 0 80 -80 190 1 0 0 0 1 0 0 0 1 3010.dat
+1 7 -30 -88 140 0 0 1 0 1 0 -1 0 0 4162.dat
+1 7 30 -88 140 0 0 1 0 1 0 -1 0 0 4162.dat
+1 0 -30 -104 -10 -1 0 0 0 1 0 0 0 -1 4286.dat
+1 0 30 -104 -10 -1 0 0 0 1 0 0 0 -1 4286.dat
+1 0 -10 -88 200 0 0 -1 0 1 0 1 0 0 4275b.dat
+1 0 10 -88 200 0 0 -1 0 1 0 1 0 0 4275b.dat
+1 0 0 -104 -30 1 0 0 0 1 0 0 0 1 3010.dat
+1 0 0 -104 30 1 0 0 0 1 0 0 0 1 3794a.dat
+1 0 0 -96 190 1 0 0 0 1 0 0 0 1 3794a.dat
+1 0 0 -112 -30 1 0 0 0 1 0 0 0 1 4315.dat
+1 33 0 -108 -44 1 0 0 0 1 0 0 0 1 2507.dat
+1 0 -30 -120 -20 0 0 1 0 1 0 -1 0 0 2412b.
+1 0 30 -120 -20 0 0 1 0 1 0 -1 0 0 2412b.dat
+1 7 -70 -96 200 0 0 -1 0 1 0 1 0 0 4531.dat
+1 7 70 -96 200 0 0 -1 0 1 0 1 0 0 4531.dat
+
+
+0 FILE 1787 - Vehicle - Engine.ldr
+0 Vehicle - Engine
+0 Name: 1787 - Vehicle - Engine.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 -10 -4 30 0 0 1 0 1 0 -1 0 0 4276b.dat
+1 0 10 -4 30 0 0 1 0 1 0 -1 0 0 4276b.dat
+1 7 0 4 40 1 0 0 0 1 0 0 0 1 2419.dat
+1 0 40 12 50 -1 0 0 0 1 0 0 0 -1 4229.dat
+1 0 -40 12 50 -1 0 0 0 1 0 0 0 -1 4229.dat
+1 1 0 12 30 0 0 -1 0 1 0 1 0 0 3020.dat
+1 0 0 44 50 0 0 -1 0 1 0 1 0 0 4591.dat
+1 0 0 -4 60 -1 0 0 0 1 0 0 0 -1 2452.dat
+
+0 FILE 1787 - Vehicle - Engine - Rocket.ldr
+0 Vehicle - Engine - Rocket
+0 Name: 1787 - Vehicle - Engine - Rocket.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 0 0 -4 30 0 0 1 0 1 0 -1 0 0 4531.dat
+1 7 0 12 40 1 0 0 0 1 0 0 0 1 3794a.dat
+1 7 0 12 20 1 0 0 0 1 0 0 0 1 3794a.dat
+
+0 FILE 1787 - Vehicle - Antenna.ldr
+0 Vehicle - Antenna
+0 Name: 1787 - Vehicle - Antenna.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+
+
+0 FILE 1787 - Vehicle + Minifig.ldr
+0 Vehicle + Minifig
+0 Name: 1787 - Vehicle + Minifig.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+
+
+0 FILE 1787 - Vehicle + Cockpit.ldr
+0 Vehicle + Cockpit
+0 Name: 1787 - Vehicle + Cockpit.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+
+
+0 FILE 1787 - Minifig 1.ldr
+0 Minifig 1
+0 Name: 1787 - Minifig 1.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 1 0 0.512 6.693 1 0 0 0 0.988362 0.152123 0 -0.152123 0.988362 3838.dat
+1 8 0 0.512 6.693 1 0 0 0 0.988362 0.152123 0 -0.152123 0.988362 973p64.dat
+
+1 7 0 44 0 1 0 0 0 0 1 0 -1 0 3817.dat
+
+
+0 FILE 1787 - Minifig 1 - Helmet.ldr
+0 Minifig 1 - Helmet
+0 Name: 1787 - Minifig 1 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+
+
+0 FILE 1787 - Minifig 2.ldr
+0 Minifig 2
+0 Name: 1787 - Minifig 2.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron
+
+1 14 0 -27 0 0.913545 0 -0.406737 0 1 0 0.406737 0 0.913545 3626bp68.dat
+1 1 0 0 0 1 0 0 0 1 0 0 0 1 3838.dat
+1 8 0 0 0 1 0 0 0 1 0 0 0 1 973p64.dat
+1 7 0 44 0 1 0 0 0 0.978148 -0.207912 0 0.207912 0.978148 3817.dat
+
+
+0 FILE 1787 - Minifig 2 - Helmet.ldr
+0 Minifig 2 - Helmet
+0 Name: 1787 - Minifig 2 - Helmet.ldr
+0 Author: Damien Roux [Darats]
+0 !LDRAW_ORG Model
+0 !LICENSE Redistributable under CCAL version 2.0 : see CAreadme.txt
+
+0 !THEME Space / Unitron

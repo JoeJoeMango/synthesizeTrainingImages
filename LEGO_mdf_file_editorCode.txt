@@ -1,0 +1,32 @@
+dataResults = []
+allParts = []
+selectedParts = []
+finalPartList = []
+
+mpdLEGOFilePath = '/Users/josephmango/Desktop/TrainingData/1787-1 - Crater Cruiser.mpd'
+utityColliderOutput = '/Users/josephmango/Desktop/TrainingData/PartData/session 1/1787 - crater cruiser_Data_0_2019-08-05-40-17.txt'
+
+# ------------ OUTPUTS LEGO .MDF FILE ------------#
+with open(utityColliderOutput, 'r') as t:
+    for lines in t:
+        if lines.endswith('\n'):
+            dataResults.append(lines.rstrip('\n'))
+
+with open(mpdLEGOFilePath, 'r') as f:
+    for line in f:
+        for i in range(len(dataResults)):
+            if line.rstrip('\n').endswith(dataResults[i]+'.dat'):
+                selectedParts.append(line.rstrip('\n'))
+
+with open(mpdLEGOFilePath, 'r') as f:
+    for line in f:
+        if line.rstrip('\n').endswith('.dat'):
+            allParts.append(line.rstrip('\n'))
+
+finalPartList = list(set(allParts) - set(selectedParts))
+
+newFile = open(mpdLEGOFilePath, 'r').read()
+
+for i in finalPartList:
+    newFile = newFile.replace(i, ' ')
+with open('foo.mpd', 'w') as f2: f2.write(newFile)
