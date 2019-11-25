@@ -5,6 +5,14 @@ import os, sys
 import re
 import time
 import glob
+
+from PyQt5.QtWidgets import QFileDialog, QApplication, QMainWindow, \
+    QPushButton, QVBoxLayout, QWidget
+from PyQt5 import QtCore, QtWidgets
+import sys
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+
 cwd = os.getcwd()
 
 LEGOimage = cwd + '/ScreenShots/Session 0'
@@ -18,6 +26,7 @@ pngImages = []
 
 dirs = os.listdir(BGfile)
 finalSize = 1600
+
 
 for filename in os.listdir(LEGOimage):
         pngImages.append(Image.open("ScreenShots/Session 0/"+filename))
