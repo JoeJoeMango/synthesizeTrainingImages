@@ -23,6 +23,10 @@ fileNames =[]
 originalFileNames = []
 pngImages = []
 
+name = ''
+
+resizeIMGfinsished = False
+
 pngFolderDirectory = 'file'
 videoFileDirectory = 'file'
 
@@ -33,17 +37,18 @@ def openPNG():
     file = str(QFileDialog.getExistingDirectory(choosePNGbtn, "Select Directory"))
     global pngFolderDirectory
     pngFolderDirectory = file
-    l1.setText(pngFolderDirectory)
+    PNGpath.setText(pngFolderDirectory)
     print(file)
 
 def openVideoFile():
     file = QFileDialog.getOpenFileName(chooseVideoBtn, 'Open')
     global videoFileDirectory
     videoFileDirectory = str(file[0])
+    VideoPath.setText(videoFileDirectory)
     print(videoFileDirectory)
     
-def synthesize():
-    print('synthesizing Data')
+def processVideo():
+    print('processing Video')
     for filename in os.listdir(pngFolderDirectory):
         try:
             pngImages.append(Image.open(pngFolderDirectory+"/"+filename))
@@ -55,17 +60,32 @@ def synthesize():
         i = i[:-4]
         originalFileNames.append(i)
 
+    splitVideo()
+    deleteDStore()
+    resize_aspect_fit()
+
+def synthesize():
+    for filename in os.listdir(pngFolderDirectory):
+        try:
+            pngImages.append(Image.open(pngFolderDirectory+"/"+filename))
+            fileNames.append(filename)
+        except OSError:
+                print('error')
+
+    for i in fileNames:
+        i = i[:-4]
+        originalFileNames.append(i)
     
-    # splitVideo()
-    # deleteDStore()
-    # jpgCheck()
-    # resize_aspect_fit()
     compositImages()
+
+
+
+
 
 #------------------Split video frames------------------
 def splitVideo():
     cap = cv2.VideoCapture(videoFileDirectory)
-
+    ProcessVideoSatus.setText('extracting video frames')
     currentFrame = 0
     while True:
         # Capture frame-by-frame
@@ -73,6 +93,7 @@ def splitVideo():
         if frame is None:
             break
         # Saves image of the current frame in jpg file
+        global name
         name = BGfile + str(currentFrame) + '.jpg'
         print('Creating...' + name)
 
@@ -104,6 +125,7 @@ def deleteDStore():
 
 # ----------deletes all files that are not .jpg-----------# 
 def jpgCheck():
+    ProcessVideoSatus.setText('jpg check')
     print('-----------checking JPGS ------------')
     for item in dirs:
         if os.path.isfile(BGfile+item):
@@ -118,15 +140,13 @@ def jpgCheck():
                       
 # -------- Resize all background images to fit PNG --------#
 def resize_aspect_fit():
+    ProcessVideoSatus.setText('Resizing Images')
     print('----------resizing images-------------')
     for item in dirs:
-        if item == '.DS_Store':
-            continue
         if os.path.isfile(BGfile+item):
             im = Image.open(BGfile+item)
             f, e = os.path.splitext(BGfile+item)
             size = im.size
-
             cropPointX = (im.width/2)/4
             cropPointY = (im.height/2)+(finalSize/2)
             (width, height) = (finalSize, finalSize)
@@ -140,22 +160,32 @@ def resize_aspect_fit():
                 im.resize((finalSize,finalSize), Image.ANTIALIAS).save(f + 'resized.jpg', 'JPEG', quality=90)
             path = os.path.join(BGfile, item)
             os.remove(path)
+
+    print('----------DONE-------------')
+    ProcessVideoSatus.setText('FINISHED')
+    global resizeIMGfinsished
+    resizeIMGfinsished = True
 # -------- Paste PNG on to JPG --------#
 
 def compositImages():
-    print('--------------synthesing-------------')
+    # print('--------------synthesing-------------')
+    
     i = 0
-    path = pngFolderDirectory
-    # os.system(path+'')
+    path = BGfile
+    os.system(path)
+    pngImages = pngFolderDirectory
+    print(len(pngImages))
     while i in range(len(pngImages)):
-        
+        continue
         for item in dirs:
             if os.path.isfile(BGfile+item):
-                im = Image.open(BGfile+item)
-                im.resize((finalSize,finalSize))
-                BGimgWidth = im.width
-                BGimgheight = im.height
                 try:
+                    im = Image.open(BGfile+item)
+                    im.resize((finalSize,finalSize))
+
+                    BGimgWidth = im.width
+                    BGimgheight = im.height
+            
                     PNGwidth = pngImages[i].width
                     PNGheight = pngImages[i].height
 
@@ -163,14 +193,16 @@ def compositImages():
                     imagePlacementH = (BGimgheight - PNGheight)/2
                     
                     newImage = im.copy()
-               
+                
                     newImage.paste(pngImages[i], (int(imagePlacementW),int(imagePlacementH)), pngImages[i])
                     newImage.save("synthesized Images/"+str(i)+".jpg")
-                    print('--------------synthesing-------------')
+                    
                 except IndexError:
-                    print('ding dong its the end')
-                    break
+                     print('ding dong its the end')
+                     SynthesizeSatus.setText('FINSIHED')
+                     break
                 i+=1
+            
 
 
 
@@ -180,33 +212,41 @@ central_widget = QWidget()
 
 choosePNGbtn = QPushButton('PNG data', central_widget)
 
-l1 = QtWidgets.QLabel(central_widget)
-l1.setAlignment(QtCore.Qt.AlignCenter)
-l1.move(50,20)
+PNGpath = QtWidgets.QLabel(central_widget)
+PNGpath.setAlignment(QtCore.Qt.AlignCenter)
 
-# l1.resize(win.width/2,win.height/4)
-print(win)
 chooseVideoBtn = QPushButton('video', central_widget)
+
+VideoPath = QtWidgets.QLabel(central_widget)
+VideoPath.setAlignment(QtCore.Qt.AlignCenter)
+
+processVideoFile = QPushButton('Process Video', central_widget)
+
+ProcessVideoSatus = QtWidgets.QLabel(central_widget)
+ProcessVideoSatus.setAlignment(QtCore.Qt.AlignCenter)
+
 synthesizeData = QPushButton('synthesize',central_widget)
 
-print(openVideoFile)
+SynthesizeSatus = QtWidgets.QLabel(central_widget)
+SynthesizeSatus.setAlignment(QtCore.Qt.AlignCenter)
 
 choosePNGbtn.clicked.connect(openPNG)
 chooseVideoBtn.clicked.connect(openVideoFile)
+processVideoFile.clicked.connect(processVideo)
 synthesizeData.clicked.connect(synthesize)
 
 layout = QVBoxLayout(central_widget)
 
 layout.addWidget(choosePNGbtn)
+layout.addWidget(PNGpath)
 layout.addWidget(chooseVideoBtn)
+layout.addWidget(VideoPath)
+layout.addWidget(processVideoFile)
+layout.addWidget(ProcessVideoSatus)
 layout.addWidget(synthesizeData)
+layout.addWidget(SynthesizeSatus)
 
 win.setCentralWidget(central_widget)
 # win.setGeometry(300,300,300,200)
 win.show()
 app.exit(app.exec_())
-
-# deleteDStore()
-# jpgCheck()
-# resize_aspect_fit()
-# compositImages()
